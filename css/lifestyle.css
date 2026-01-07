@@ -1,0 +1,127 @@
+/* CSS for layout of the grid display */
+.layout{
+    display: grid;
+    grid-template-columns: 31% 1% 36% 1% 31%;
+}
+
+/* CSS for images on the middle section */
+.middleSection{
+    width: 350px;
+    height: 280px;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* CSS for vertical rule */
+.vr{
+    margin-top: 20px;
+    height: 98%;
+    width: 1px !important;
+    visibility: visible;
+}
+
+/* CSS for horizontal rule */
+.line{
+    visibility: hidden;
+    height: 10px;
+}
+
+
+/* CSS to make the website responsive */
+
+/* Targets screens with a maximum width of 576px */
+@media (max-width: 576px) {
+
+    /* CSS to center align text */
+    .alignCenter{
+        text-align: center;
+        padding-top: 0px !important;
+    }
+    
+}
+
+/* Targets screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  
+    /* CSS to center align text */
+    .alignCenter{
+        text-align: center;
+        padding-top: 90px;
+
+    }
+
+    /* CSS to vertical align the left and right section articles in the center */
+    .LeftRightSection{
+        display: block !important;
+    }
+
+    /* CSS to vertically align middle section articles in the center */
+    .middleSection{
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+/* Targets screens with a minimum width of 992px */
+@media (min-width: 992px) {
+
+    /* CSS to center align text */
+    .alignCenter{
+        text-align: center;
+        max-width: 260px !important;
+    }
+    
+}
+
+/* Targets screens with a maximum width of 992px */
+@media (max-width: 992px) {
+
+    /* CSS to center align text */
+        .alignCenter{
+            text-align: center;
+        }
+
+    /* CSS to arrange the left and right section articles into a row*/
+    .LeftRightSection{
+        display: flex;
+    }
+
+    /* CSS to make vertical rule hidden */
+    .vr{
+        height: 0px;
+        visibility: hidden;
+    }
+
+    /* CSS to make an element visible and set its height */
+    .line{
+        visibility: visible;
+        height: 10px;
+    }
+
+}
+
+/* Targets screens with a minimum width of 1200px */
+@media (min-width: 1200px) {
+
+    /* CSS to adjust the width and height of the image in middle section */
+    .middleSection{
+        width: 480px !important;
+        height: 380px !important;
+    }
+
+}
+
+/* Targets screens with a maximum width of 1200px */
+@media (max-width: 1200px) {
+
+    /* CSS to set the width and height of the image in middle section */
+    .middleSection{
+        width: 345px !important;
+        height: 300px !important;
+    }
+
+}
+
+/* end of CSS to make the website responsive */

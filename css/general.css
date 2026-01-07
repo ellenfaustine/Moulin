@@ -1,0 +1,756 @@
+/* Fonts */
+/* Fonts from Cufon Fonts */
+
+/* Defines a custom font named "gallero" */
+@font-face {
+    font-family: "gallero";
+    src: url("../fonts/gallerovintagedemoversionregular-qze80.otf");
+}
+
+/* Defines a custom font named "memories" */
+@font-face {
+    font-family: "memories";
+    src: url("../fonts/GR-MEMON.TTF");
+}
+
+/* Defines a custom font named "canelamedium" */
+@font-face {
+    font-family: "canelamedium";
+    src: url("../fonts/CanelaText-Medium-Trial.otf");
+}
+
+
+/* General CSS for all pages */
+
+/* to make body unscrollable sideways*/
+body{
+    overflow-x: hidden;
+}
+
+/* sets the font for h1, h1 and h3 */
+h1, h2, h3{
+    font-family: "memories";
+    width: auto;
+}
+
+/* sets the font for the article title */
+.font h2{
+    font-family: "canelamedium";
+}
+
+/* to adjust p element */
+p{
+    width: auto;
+}
+
+/* CSS for horizontal rule */
+hr{
+    width: 95%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* CSS for URL */
+a{
+    text-decoration: none !important;
+}
+
+/* CSS for unordered list */
+ul{
+    list-style: none;
+}
+
+/* CSS for list item */
+li{
+    margin-right: 50px;
+}
+
+/* CSS for list item when hovered */
+li:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+/* CSS for elements inside row */
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* CSS for when an element with this class specified is hovered */
+.underline :hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* CSS for article title */
+.articletitle{
+    width: 350px !important;
+}
+
+/* end of general CSS for all pages */
+
+
+/* CSS for page header */
+
+/* CSS for close button */
+.close{
+    color: white;
+    font-size: 30px;
+    margin: 40px 50px 0px 0px;
+}
+
+/* search */
+
+/* CSS for search page */
+#search{
+    background-color: rgba(188, 11, 11, 0.9);
+    position: absolute;
+    text-align: center;
+    height: 1200px;
+    width: 100%;
+    z-index: 1500;
+    visibility: hidden;
+    margin: auto;
+}
+
+/* CSS to make search page visible */
+#search.visible{
+    position: fixed;
+    visibility: visible;
+}
+
+/* styles for search bar */
+#search input{
+    width: 45%;
+    height: 55px;
+    background: transparent;
+    color: antiquewhite;
+    font-size: 50px;
+    border: 0;
+    outline: none;
+}
+
+/* CSS for search bar */
+::placeholder{
+    font-family: "memories";
+    font-size: 50px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+/* CSS for horizontal rule under the search bar */
+.searchBar{
+    width: 55%;
+    background:  rgba(222, 222, 222,1);
+    border: none;
+    height: 2px;
+}
+
+/* CSS for the search button */
+button{
+    background-color: transparent;
+    border: none;
+    color: antiquewhite;
+}
+
+/* CSS to style and adjust the search button */
+button i{
+    font-size: 24px;
+    margin: 0px 0px 0px 50px;
+}
+
+/* end of CSS for search */
+
+
+/* menu list */
+
+/* CSS for hamburger page */
+#hamburger {
+    background-color: rgba(188, 11, 11, 0.9);
+    position: absolute;
+    text-align: center;
+    height: 1200px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1500;
+    visibility: hidden;
+}
+
+/* CSS to make hamburger page visible */
+#hamburger.visible {
+    position: fixed;
+    visibility: visible;
+}
+
+/* CSS for menu list  */
+.menu{
+    color: antiquewhite;
+    font-size: 55px;
+    font-family: "memories";
+    text-align: center;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.menuContainer{
+    margin-top: 8%;
+}
+
+/* CSS for menu items */
+.menu a{
+    color: antiquewhite;
+}
+
+/* animation for menu list */
+.slideup {
+    animation: slideup 0.5s ease forwards 0.2s;
+}
+
+/* CSS to style element when hovered */
+.slideup:hover{
+    text-decoration: underline;
+}
+
+/* define keyframe animation for the menu list */
+@keyframes slideup {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-40px);
+        opacity:1;
+    }
+}
+
+/* end of CSS for menu list */
+
+
+/* logo section */
+
+/* CSS for logo section */
+#logoSection{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+/* style for the logo */
+.logo{
+    font-family: "gallero";
+    font-size: 60px;
+    font-weight: bold;
+    color:  rgb(188, 11, 11);
+    text-align: center;
+}
+
+/* style for search and hamburger icon */
+.icon{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 7%;
+    padding: 10px;
+    color: black;
+}
+
+/* style for icons when hovered */
+.icon:hover {
+    cursor: pointer;
+    color: rgb(188, 11, 11);
+}
+
+/* end of CSS for logo section */
+
+
+/* sticky navigation bar */
+
+/* CSS for sticky navigation bar */
+.stickyNavbar{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    height: 57px;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 0.5px 5px rgb(169, 168, 168);
+    visibility: hidden;
+}
+
+/* CSS to make the navigation bar stick to the top */
+.sticky{
+    position: fixed;
+    visibility: visible;
+    z-index: 999;
+}
+
+/* style for logo in sticky navigation bar */
+.stickyLogo{
+    font-family: "gallero";
+    font-size: 35px;
+    font-weight: bold;
+    color:  rgb(188, 11, 11);
+    margin: 8px 0px 0px 20px;
+}
+
+/* style for search and hamburger icon in sticky navigation bar */
+.stickyIcon{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+}
+
+/* end of CSS for sticky navigation bar  */
+
+
+/* navigation bar */
+
+/* CSS for navigation bar */
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 5%;
+    gap: 10px;
+    visibility: visible;
+}
+
+/* CSS to make the navigation bar visible */
+.hide{
+    visibility: visible;
+}
+
+/* CSS for navigation bar items */
+.navbarItem{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSS to make line decoration to show which page the user is in for navigation bar */
+.active{
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-decoration-color: rgb(188, 11, 11);
+}
+
+/* styles for navigation bar items */
+.navbarItem a{
+    color: black;
+}
+
+/* style navigation bar item when hovered */
+.navbarItem a:hover{
+    color:  rgb(188, 11, 11);
+} 
+
+/* end of CSS for page header */
+
+
+/* CSS for article content page */
+
+/* CSS for the article placeholder */
+#article_placeholder{
+    background-color: white;
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+    z-index: 2000 !important;
+    visibility: hidden;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* CSS to make the article content page visible */
+#article_placeholder.visible{
+    position: fixed;
+    visibility: visible;
+}
+
+/* CSS to style the close button in the article content page */
+#article_placeholder .close{
+    color: black !important;
+    font-size: 30px;
+    margin: 40px 50px 0px 0px;
+}
+
+/* CSS for image in the article content page */
+.articleContentImg{
+    width: 530px;
+    height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* CSS to make the content left align */
+.content{
+    width: 76%;
+    text-align: left !important;
+}
+
+/* end of CSS for article content page */
+
+
+/* CSS for container */
+.containerBox{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* CSS for article images in trends sections */
+.articleImg1{
+    width: 280px;
+    height: 200px;
+    margin: 8px auto 0px auto;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* CSS for article images in featured sections */
+.articleImg2{
+    width: 160px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* CSS for article images in news sections */
+.articleImg3{
+    width: 210px;
+    height: 280px;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* CSS for big stories */
+.bigStoryImg{
+    width: 400px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* CSS for layout of articles in latest stories section */
+.storiesContainer{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    margin-top: 50px;
+}
+
+/* CSS for the article images in latest stories section */
+.storiesContainer img{
+    display: flex;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: auto;
+    cursor: pointer;
+}
+
+
+/* CSS for page footer */
+
+/* style for footer */
+.footer{
+    width: 100%;
+    background-color: black;
+    margin-top: 80px;
+}
+
+/* styles for logo in the footer */
+.footerLogo{
+    font-family: "gallero";
+    font-size: 35px;
+    font-weight: bold;
+    color:  white;
+}
+
+/* CSS for footer content */
+.footerContent{
+    padding: 30px 30px;
+}
+
+/* CSS for h4 elements in the footer */
+.footerContent div h4{
+    font-family: "memories";
+    color: white;
+}
+
+/* CSS for the p element in the footer */
+.footerContent div p{
+    color: white;
+}
+
+/* CSS for social media links */
+.footerContent .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 10px 10px 10px 0px;
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+/* CSS to style social media links when hovered */
+.footerContent .social-links a:hover {
+    color: rgb(188, 11, 11);
+}
+
+/* end of CSS for page footer */
+
+
+/* CSS to make the website responsive */
+
+/* Targets screens with a minimum width of 576px */
+@media (min-width: 576px) {
+
+    /* CSS to adjust search bar position */
+    .searchContainer{
+        margin-top: 190px;
+    }
+
+    /* CSS to adjust the containers width */
+    .containerBox, .storiesContainer{
+        max-width: 400px;
+    }
+
+    /* CSS to adjust logo in the footer */
+    .footerLogo{
+        text-align: left;
+        margin-left: 13px;
+    }
+
+    /* CSS to adjust the h4 element in the footer */
+    .footerContent div h4{
+        margin: 0px auto 20px 30px;
+    }
+
+    /* CSS to adjust the p element in the footer content */
+    .footerContent div p{
+        margin: 0px 50px 10px 0px;
+    }
+}
+
+/* Targets screens with a maximum width of 576px */
+@media (max-width: 576px) {
+
+    /* CSS to center align text in the trend section */
+    .trend{
+        text-align: center !important;
+    }
+
+    /* CSS to adjust the width and height for article images with this class specified*/
+    .articleImg1{
+            width: 350px !important;
+            height: 270px !important;
+        }
+
+    /* CSS to adjust the width and height for article image in article content page */
+    .articleContentImg{
+        width: 330px;
+        height: 400px;
+    }
+
+    /* CSS to style big story image */
+    .bigStoryImg{
+        width: 300px !important;
+        height: auto;
+        cursor: pointer;
+    }
+
+    /* CSS to adjust position of article title */
+    .adjustPos{
+        width: 270px !important;
+        font-size: 20px;
+    }
+
+    /* CSS to adjust logo in the footer */
+    .footerLogo{
+        text-align: center;
+        margin-right: 14px;
+    }
+
+    /* CSS to adjust content in the footer */
+    .footerContent{
+        text-align: center;
+    }
+
+    /* CSS to adjust h4 element in the footer */
+    .footerContent div h4{
+        margin: 23px 28px 20px 0px;
+    }
+
+    /* CSS to align p element in the footer */
+    .footerContent div p{
+        text-align: center;
+    }
+
+}
+
+/* Targets screens with a maximum width of 668px */
+@media (max-width: 668px){
+
+    /* CSS to hide the navigation bar */
+    .navbar{
+        visibility: hidden;
+    }
+
+    /* CSS to hide the horizontal rule */
+    .hide{
+        visibility: hidden;
+    }
+
+}
+
+/* Targets screens with a minimum width of 768px */
+@media (min-width: 768px) {
+
+    
+    /* CSS to adjust the containers width */
+    .containerBox, .storiesContainer{
+        max-width: 600px;
+    }
+
+    /* CSS to adjust the article title */
+    .articletitle{
+        width: 270px;
+        height: auto;
+    }
+
+    /* CSS to adjust the width and height of the big story image */
+    .bigStoryImg{
+        width: 700px;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+/* Targets screens with a maximum width of 768px */
+@media (max-width: 768px) {
+
+    /* CSS to change the display in the trends section */
+    .trend{
+        display: block !important;
+    }
+
+    /* CSS to adjust the display and the alignment of article image in the trends section */
+    .articleImg3{
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+/* Targets screens with a minimum width of 992px */
+@media (min-width: 992px) {
+
+    /* to adjust the container width */
+    .containerBox{
+        max-width: 1000px;
+    }
+}
+
+/* Targets screens with a maximum width of 992px */
+@media (max-width: 992px) {
+
+    /* to adjust search bar position */
+    .searchContainer{
+        margin-top: 230px;
+    }
+
+    /* to center align text */
+    .center{
+        text-align: center !important;
+    }
+
+    /* to adjust the width and height of article images with this class specified */
+    .articleImg1{
+        width: 450px;
+        height: 320px;
+    }
+
+    /* CSS to adjust the width and height of the big story image */
+    .bigStoryImg{
+        width: 500px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    /* to adjust the width of article images with this class specified */
+    .articleImg2{
+        width: 300px !important;
+    }
+
+    /* CSS to adjust position of article title */
+    .adjustPos{
+        margin: auto !important;
+        font-size: 19px;
+    }
+
+}
+
+/* Targets screens with a minimum width of 1200px */
+@media (min-width: 1200px) {
+
+    /* to adjust the width of container */
+    .containerBox, .storiesContainer{
+        max-width: 1200px;
+    }
+
+    /* CSS to adjust position of article title */
+    .adjustPos{
+        text-align: left !important;
+        margin-left: 8px;
+    }
+
+}
+
+/* Targets screens with a maximum width of 1200px */
+@media (max-width: 1200px) {
+
+    /* CSS to change the display and center align text in the trends section */
+    .trend{
+        display: flex;
+        text-align: center;
+    }
+    
+    /* CSS to adjust article title */
+    .articletitle{
+        width: 350px !important;
+        height: auto;
+        padding: 30px 0px 10px 0px;
+        background-color: white;
+    }
+
+    /* CSS to adjust the width of container of articles in the latest stories section */
+    .storiesContainer{
+        max-width: 820px;
+    }
+
+}
+
+/* Targets screens with a minimum width of 1400px */
+@media (min-width: 1400px) {
+
+    /* CSS to adjust the width of container of articles in the latest stories section */
+    .containerBox, .storiesContainer{
+        max-width: 1200px;
+    }
+
+}
+
+/* end of CSS to make the website responsive */
